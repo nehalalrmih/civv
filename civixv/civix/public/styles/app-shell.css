@@ -1,0 +1,141 @@
+/**
+ * طبقة الواجهة العامة: التنبيهات (Toast) والتحميل العام
+ * تُحمّل دائماً مع index.html ولا تستبدل أنماط الصفحات.
+ */
+
+/* ——— Toast ——— */
+.toast-host {
+    position: fixed;
+    left: 16px;
+    bottom: 16px;
+    z-index: 100000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: min(420px, calc(100vw - 32px));
+    pointer-events: none;
+    direction: rtl;
+    font-family: 'Tajawal', sans-serif;
+}
+
+.toast-host .toast {
+    pointer-events: auto;
+    padding: 14px 18px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    animation: toast-in 0.28s ease-out;
+    border-right: 4px solid transparent;
+}
+
+.toast-host .toast__icon {
+    flex-shrink: 0;
+    font-size: 1.1rem;
+    margin-top: 2px;
+}
+
+.toast-host .toast__msg {
+    flex: 1;
+    line-height: 1.45;
+    font-size: 0.95rem;
+}
+
+.toast-host .toast--success {
+    background: #ecfdf5;
+    color: #065f46;
+    border-right-color: #10b981;
+}
+
+.toast-host .toast--error {
+    background: #fef2f2;
+    color: #991b1b;
+    border-right-color: #ef4444;
+}
+
+.toast-host .toast--warning {
+    background: #fffbeb;
+    color: #92400e;
+    border-right-color: #f59e0b;
+}
+
+.toast-host .toast--info {
+    background: #eff6ff;
+    color: #1e40af;
+    border-right-color: #3b82f6;
+}
+
+@keyframes toast-in {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ——— Global loader ——— */
+.global-loader {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: rgba(15, 23, 42, 0.35);
+    backdrop-filter: blur(2px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    direction: rtl;
+    font-family: 'Tajawal', sans-serif;
+}
+
+.global-loader.is-active {
+    display: flex;
+}
+
+.global-loader__box {
+    background: #fff;
+    padding: 28px 36px;
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    min-width: 200px;
+}
+
+.global-loader__spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #e2e8f0;
+    border-top-color: #193382;
+    border-radius: 50%;
+    margin: 0 auto 14px;
+    animation: spin 0.75s linear infinite;
+}
+
+.global-loader__text {
+    color: #334155;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ——— Table UX helpers ——— */
+.table-loading-row td,
+.table-empty-row td {
+    text-align: center !important;
+    padding: 2rem 1rem !important;
+    color: #64748b !important;
+    font-weight: 500;
+}
+
+.table-loading-row .fa-spinner {
+    margin-left: 8px;
+    color: #193382;
+}

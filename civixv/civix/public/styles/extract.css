@@ -1,0 +1,82 @@
+body {
+    font-family: 'Tajawal', sans-serif;
+    margin: 0;
+    background-color: #f4f6f9;
+}
+
+
+.header {
+    height: 9vh;
+    background: linear-gradient(to right, #ffffff, #193382);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: #fff;
+    font-weight: bold;
+}
+.logo {position: absolute;  left: 20px; top: 50%;  transform: translateY(-50%);}
+
+.logo img { height: 45px; } 
+.menu-icon { position: absolute; right: 20px; top: 50%; transform: translateY(-50%); cursor: pointer; }
+.menu-icon span { display: block; width: 25px; height: 3px; margin: 4px 0; background: #fff; }
+.dropdown-menu { display: none; position: absolute; top: 60px; right: 10px; background: white; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+.dropdown-menu a { display: block; padding: 10px; text-decoration: none; color: #193382; }
+
+
+.project-title { text-align: center; color: #193382; margin: 20px 0; font-size: 1.5em; }
+.project-details-toolbar {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 15px;
+}
+.back-btn {
+    background: #193382;
+    color: white;
+    border: none;
+    padding: 8px;      
+    border-radius: 50%;  
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 15px;
+    position: absolute;  
+    top: 99px;          
+    right: 20px; 
+    z-index: 1000;
+}
+
+.back-btn:hover {
+    background: #231867;
+}
+
+.back-btn:hover {
+    color: rgb(255, 255, 255);
+    background: #231867;
+}
+
+.grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-bottom: 25px; }
+.grid-item, .discount-item { background: #d0d4e8; padding: 15px; border-radius: 8px; text-align: center; cursor: not-allowed; pointer-events: none; transition: 0.3s; }
+.grid-item h4, .discount-item h5 { margin: 0 0 8px 0; color: #193382; font-weight: bold; font-size: 1em; }
+.grid-item p, .discount-item p { margin: 0; font-weight: bold; font-size: 1.1em; }
+
+
+.edit-mode .grid-item, .edit-mode .discount-item {
+    pointer-events: auto;
+    cursor: pointer;
+    background: #f0f4ff;
+}
+.edit-mode .grid-item:hover, .edit-mode .discount-item:hover { background: #e0e8ff; }
+.edit-mode .grid-item.active, .edit-mode .discount-item.active { background: #cfd8ff; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+
+
+.discounts { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-bottom: 15px; }
+
+
+.net-pay { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 10px; }
+
+
+.buttons { text-align: center; margin-top: 70px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+button { padding: 12px 25px; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; color: #fff; font-size: 1em; transition: 0.3s; }
+button.edit { background: #007bff; } button.done { background: #28a745; } button.attachment { background: #ff6600; }
+button:hover { opacity: 0.9; }

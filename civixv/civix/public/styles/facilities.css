@@ -1,0 +1,111 @@
+/**
+ * المرافق وإدارة المشاريع — نفس نظام التصميم المالي (Dashboard / بطاقات / جداول)
+ */
+@import url('financial.css');
+
+.main-content {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.projects-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.projects-toolbar .finance-search-bar {
+    flex: 1;
+    min-width: 220px;
+    max-width: none;
+    margin-bottom: 0;
+}
+
+.table-box {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    overflow-x: auto;
+}
+
+.view-project-btn {
+    background: #16a085;
+    color: #fff;
+}
+
+.view-project-btn:hover {
+    background: #13856f;
+}
+/* الفورم*/
+.modal-content {
+    background: #fff;
+    width: 95%;
+    max-width: 920px;
+    border-radius: 16px;
+    padding: 14px 16px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(148, 36, 36, 0.12);
+    overflow: visible;
+}
+.modal-title {
+    font-family: 'Tajawal', sans-serif;
+    font-weight: 600;
+    color: #1a2847;
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+.form-group label {
+    display: block;
+    text-align: right;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #2b2b52;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    height: 34px;
+    padding: 4px 8px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    font-family: 'Tajawal', sans-serif;
+    font-size: 12px;
+    background: #fff;
+    transition: 0.2s;
+}
+input[type="date"] {
+    direction: rtl;
+    text-align: right;
+    color: #575656;
+    font-size: 12px;
+    padding-left: 8px;
+}
+.close-modal {
+    position: absolute;
+    top: 12px;
+    right: auto !important;
+    left: 12px !important;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    color: #1a2337;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 28px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.close-modal:hover {
+    background: #e74c3c;
+    color: #fff;
+}

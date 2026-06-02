@@ -1,0 +1,154 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+
+:root {
+    --primary-color: rgb(42, 77, 137);
+    --secondary-color: rgb(83, 83, 153);
+    --input-color: rgb(25, 25, 47);
+    --bg-gradient: linear-gradient(to right, rgb(25, 51, 130), rgb(25, 51, 130));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Almarai", sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: row; 
+    width: 100%;
+    min-height: 100vh;
+}
+
+.left_side {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: var(--bg-gradient);
+    border-radius:  5rem 0 0 5rem ; 
+    padding-top: 10rem; 
+    padding-bottom: 5rem;
+}
+
+.right_side {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}
+
+/* Right Side Content */
+.img_right {
+    width: 9rem;
+    margin-bottom: 2rem;
+}
+
+.textlogin p:first-child {
+    color: var(--primary-color);
+    font-size: 1.375rem;
+    margin-bottom: 0.625rem;
+}
+
+.textlogin p:last-child {
+    color: var(--secondary-color);
+    font-size: 1.125rem;
+}
+
+/* Login Form */
+.login_form {
+    width: 100%;
+    max-width: 25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    position: relative;
+}
+
+input {
+    width: 100%;
+    height: 2.625rem;
+    padding: 1.25rem 1.5625rem 1.25rem 3.125rem;
+    border: none;
+    border-radius: 1.25rem;
+    color: var(--input-color);
+    text-align: right;
+}
+
+.login_form input:focus {
+    outline: 2px solid rgb(55, 61, 102);
+    box-shadow: 0 0 0.625rem rgb(1,1,16);
+    border: 2px solid var(--primary-color);
+    transform: scaleY(1.09);
+    transition: 0.3s;
+}
+
+.label {
+    width: 100%;
+    font-size: 1.25rem;
+    color: beige;
+    text-align: right;
+    margin-bottom: 1.25rem;
+}
+
+.username, .password {
+    position: relative;
+    margin-bottom: 1.25rem;
+}
+
+.icon {
+    position: absolute;
+    left:1rem;
+    top: 75%;
+    transform: translateY(-50%);
+    font-size: 1.125rem;
+    color: rgb(51, 51, 85);
+    z-index: 10;
+}
+
+.btn_log {
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 1.875rem;
+    border: none;
+    background-color: rgb(255,255,255);
+    color: rgb(19,25,61);
+    font-size: 1.125rem;
+    margin-top: 1.5625rem;
+    cursor: pointer;
+    box-shadow: 0 0 0.625rem rgb(0,1,12);
+    transition: 0.3s;
+}
+
+.btn_log:hover {
+    background-color: rgb(60,67,121);
+    color: aliceblue;
+    box-shadow: 0 0 0.1875rem white;
+    transform: scale(1.10);
+}
+
+.HUIZ_login {
+    position: relative;
+    margin-top: auto;
+    padding-bottom: 3rem;
+    color: rgb(110,102,102);
+    text-shadow: 0.0625rem 0.0625rem black;
+    font-size: 1rem;
+}
+
+.HUIZ_login h4 {
+    text-align: center;
+    color: rgb(124,123,67);
+    font-size: 0.9375rem;
+}
